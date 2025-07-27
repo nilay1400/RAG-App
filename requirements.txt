@@ -1,0 +1,8 @@
+openai
+qdrant-client
+python-dotenv
+tiktoken
+PyMuPDF
+scikit-learn
+matplotlib
+streamlit
