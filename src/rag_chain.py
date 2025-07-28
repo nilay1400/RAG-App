@@ -7,7 +7,11 @@ load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 client = OpenAI(api_key=OPENAI_API_KEY)
-qdrant = QdrantClient(host="localhost", port=6333)
+#qdrant = QdrantClient(host="localhost", port=6333)
+qdrant = QdrantClient(
+    url=os.getenv("QDRANT_URL"),
+    api_key=os.getenv("QDRANT_API_KEY"),
+)
 
 bibtex_lookup = {
     "TDMR_24___AdAM.pdf": "Taheri, M., Cherezova, N., Nazari, S., Azarpeyvand, A., Ghasempouri, T., Daneshtalab, M. and Raik, J., 2024. Adam: Adaptive approximate multiplier for fault tolerance in dnn accelerators. IEEE Transactions on Device and Materials Reliability.",
