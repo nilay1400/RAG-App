@@ -10,7 +10,11 @@ from utils.cleaning import extract_text_from_pdf
 load_dotenv()
 OPENAI_KEY = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=OPENAI_KEY)
-qdrant = QdrantClient(host="localhost", port=6333)
+#qdrant = QdrantClient(host="localhost", port=6333)
+qdrant = QdrantClient(
+    url=os.getenv("QDRANT_URL"),
+    api_key=os.getenv("QDRANT_API_KEY"),
+)
 
 COLLECTION_NAME = "papers"
 
