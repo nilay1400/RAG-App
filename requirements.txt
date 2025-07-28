@@ -6,3 +6,4 @@ PyMuPDF
 scikit-learn
 matplotlib
 streamlit
+PyPDF2
